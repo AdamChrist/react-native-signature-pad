@@ -26,7 +26,7 @@ var showSignaturePad = function (signaturePadCanvas, bodyWidth, bodyHeight) {
     if ("${dataURL}") {
       signaturePad.fromDataURL("${dataURL}");
     }
-    ${Platform.OS==='ios'?'window':'document'}.addEventListener('message', function (event) {
+    document.addEventListener('message', function (event) {
       var data;
       try {
         data = JSON.parse(event.data);
